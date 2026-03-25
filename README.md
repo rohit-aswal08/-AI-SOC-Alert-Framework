@@ -92,14 +92,29 @@ Each predicted severity triggers automated response suggestions:
 ```
 AI-SOC-Alert-Framework/
 │
-├── data/
-├── notebooks/
-│   └── soc_alert_ml.ipynb
-├── model/
-│   ├── soc_alert_model.pkl
-│   └── label_encoder.pkl
-├── screenshots/
-└── report/
+├── data/                         
+│   └── soc_alerts.csv            # Synthetic SOC alert dataset
+│
+├── model/                        
+│   ├── soc_alert_model.pkl       # Trained Random Forest model
+│   └── label_encoder.pkl         # Label encoder for severity classes
+│
+├── notebooks/                    
+│   └── soc_alert_ml.ipynb        # Training + evaluation notebook
+│
+├── screenshots/                  
+│   ├── confusion_matrix.png
+│   ├── feature_importance.png
+│   ├── severity_distribution.png
+│   └── workload_reduction.png
+│
+├── report/                       
+│   └── AI_SOC_Report_Final.docx  # final report 
+│
+├── app.py                        # CLI SOC alert triage system
+├── requirements.txt              # Python dependencies
+├── README.md                     # Project documentation
+└── .gitignore
 ```
 
 ---
